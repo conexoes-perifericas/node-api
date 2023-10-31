@@ -8,7 +8,7 @@ Content-Type: application/json
 }
 
 ###
-@videoId = 90f175c3-0d37-4102-9c38-b8a11db4cbcd
+@videoId = 80335b26-c30b-4cb4-991b-953c8880b760
 @search = node
 ###
 
@@ -20,8 +20,8 @@ PUT http://localhost:3333/videos/{{videoId}}
 Content-Type: application/json
 
 {
-  "title": "Video 04",
-  "description": "Esse é o vídeo 02",
+  "title": "Video Node alterado",
+  "description": "Esse é o vídeo Node alterado",
   "duration": 200
 }
 

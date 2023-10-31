@@ -32,11 +32,11 @@ server.get('/videos', async (request) => {
 
 // PUT http://localhost:3333/videos/1
 // Route Parameter: id
-server.put('/videos/:id', (request, reply) => {
+server.put('/videos/:id', async (request, reply) => {
   const videoId = request.params.id;
   const { title, description, duration } = request.body;
 
-  database.update(videoId, {
+  await database.update(videoId, {
     title,
     description,
     duration,
