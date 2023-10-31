@@ -2,15 +2,17 @@ POST http://localhost:3333/videos
 Content-Type: application/json
 
 {
-  "title": "Video 01",
+  "title": "Video node",
   "description": "Esse é o vídeo 01",
   "duration": 100
 }
+
 ###
 @videoId = 11aebfba-8dbe-4571-bd35-95d10c47a6d4
+@search = node
 ###
 
-GET http://localhost:3333/videos
+GET http://localhost:3333/videos?search={{search}}
 
 ###
 
