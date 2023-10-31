@@ -38,7 +38,7 @@ export class DatabasePostgres {
       `
   }
 
-  delete(id) {
-
+  async delete(id) {
+    await sql`DELETE FROM videos WHERE id = ${id};`
   }
 }
