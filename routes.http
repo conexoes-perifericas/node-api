@@ -1,4 +1,9 @@
-POST http://localhost:3333/videos
+@videoId = 80335b26-c30b-4cb4-991b-953c8880b760
+@API_URL_LOCAL = http://localhost:3333
+@API_URL_PROD = 
+@search = node
+###
+POST {{API_URL_LOCAL}}/videos
 Content-Type: application/json
 
 {
@@ -8,15 +13,12 @@ Content-Type: application/json
 }
 
 ###
-@videoId = 80335b26-c30b-4cb4-991b-953c8880b760
-@search = node
-###
 
-GET http://localhost:3333/videos?search={{search}}
+GET {{API_URL_PROD}}/videos?search={{search}}
 
 ###
 
-PUT http://localhost:3333/videos/{{videoId}}
+PUT {{API_URL_LOCAL}}/videos/{{videoId}}
 Content-Type: application/json
 
 {
@@ -27,4 +29,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/videos/{{videoId}}
+DELETE {{API_URL_LOCAL}}/videos/{{videoId}}
